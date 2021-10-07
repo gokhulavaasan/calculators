@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> Home</a>
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" aria-current="page" href="index.html">CGPA</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" href="tneb.html">TNEB</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" href="bmi.html">BMI</a>
+          </li>
+        </ul>
+       </div>
+    </div>
+  </nav>
+<body style="background-color:#E6E6FA;">
+    <div class="container-fluid">
+      <form action="" name="electricform">
+        <h1 style="margin-top: 15px;">ELECTRIC BILL</h1>
+      
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-5" style="background-color:lightblue;margin-top: 15px;">
+            <div class="row">
+                  <div class="col-md-12">
+                    <br>         
+                    <label for="category" style="font-size: 20px;padding-right: 60px;">category</label>
+                    <select name="category" id="category" style="margin-bottom: 20px;">
+                      <option  value="1">Commercail</option>
+                      <option  value="2">Domestic</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="nounits" style="font-size: 20px;padding-right: 40px;">No of units</label>
+                <input type="number" id="nounits" name="nounits" placeholder="unit consumed" min="1">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <input style=" font-size :15px;margin:10px;" type="button" class="btn btn-lg btn-danger" value="Calculate" onclick="choice()">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label for="ebresult" style="font-size: 20px;padding-right: 40px;">No of units</label>
+                <input type="text" id="ebresult" name="ebresult" placeholder="result" readonly> 
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      function choice()
+      {
+        var p=document.getElementById ('category').value;
+        if(p==1)
+          {
+              netvalue3();
+          }
+
+        if(p==2)
+        {
+          netvalue2();
+        }
+      }
+      function netvalue2()
+      {
+        var u = document.getElementById ('nounits').value;
+        var s = 35;
+        var bill = 0.0;
+        if(u>0 && u<=100)
+        {
+        document.electricform.ebresult.value = "0/-";
+        }
+        else
+        if(u>100 && u<150)
+        {
+        bill = (u*2.15)+s;
+        document.electricform.ebresult.value= bill;
+        }
+        else
+        if(u>=150 && u<300)
+        {
+        bill = (u*3)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        if(u>=300 && u<500)
+        {
+        bill = (u*3.5)+s;
+        document.electricform.ebresult.value= bill;
+        }
+        else
+        if(u>=500 && u<1000)
+        {
+        bill = (u*6)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        {
+          document.electricform.ebresult.value= bill;
+        }
+      }
+      function netvalue3()
+      {
+        var u = document.getElementById ('nounits').value;
+        var s = 65;
+        var bill = 0.0;
+        if(u>0 && u<50)
+        {
+        bill = (u*3)+s;
+        document.electricform.ebresult.value= bill;
+        }
+        else
+        if(u>=50 && u<150)
+        {
+        bill = (u*4.5)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        if(u>=150 && u<300)
+        {
+        bill = (u*5.5)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        if(u>=300 && u<500)
+        {
+        bill = (u*6.8)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        if(u>=500 && u<1000)
+        {
+        bill = (u*9)+s;
+        document.electricform.ebresult.value = bill;
+        }
+        else
+        {
+          document.electricform.ebresult.value= "Invalid ";
+        }
+      }
+
+
+    </script>
+</body>
+</html>

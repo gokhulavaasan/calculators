@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Calculator</title>
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> Home</a>
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" aria-current="page" href="index.html">CGPA</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" href="tneb.html">TNEB</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="btn btn-md btn-dark m-1" href="bmi.html">BMI</a>
+          </li>
+        </ul>
+       </div>
+    </div>
+  </nav>
+<body style="background-color:#E6E6FA;">
+   <div class="container">
+     <div class="row">
+       <h2 style="text-align: center;">GPA</h2>
+      <div class="col-md-3"><h4></h4></div>
+       <div class="col-md-6" style="background-color:#E6E6FA;border-radius: 5px;margin-top: 10px;margin-bottom: 10px;">
+        <form name="gpa">
+          <table style="margin-left: 80px;">
+            <tr>
+              <th>subject</th>
+              <th>grade</th>
+              <th>credit</th>
+            </tr>
+            <tr>
+              <td>subject 1</td>
+              <td>
+                <select name="mark1" id="mark1">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred1" name="cred1" min="1"></td>
+            </tr>
+            <tr>
+              <td>subject 2</td>
+              <td>
+                <select name="mark2" id="mark2">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred2" name="cred2" min="1"></td>
+            </tr>
+            <tr>
+              <td>subject 3</td>
+              <td>
+                <select name="mark3" id="mark3">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred3" name="cred3" min="1"></td>
+            </tr>
+            <tr>
+              <td>subject 4</td>
+              <td>
+                <select name="mark4" id="mark4">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred4" name="cred4" min="1"></td>
+            </tr>
+            <tr>
+              <td>subject 5</td>
+              <td>
+                <select name="mark5" id="mark5">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred5" name="cred5" min="1"></td>
+            </tr>
+            <tr>
+              <td>subject 6</td>
+              <td>
+                <select name="mark6" id="mark6">
+                  <option  value="10">O</option>
+                  <option  value="9">A+</option>
+                  <option  value="8">A</option>
+                  <option  value="7">B+</option>
+                  <option  value="6">B</option>
+                </select>
+              </td>
+              <td><input type="number" id="cred6" name="cred6" min="1"></td>
+            </tr>
+            <tr>
+              <td><input type="button" class="btn btn-lg btn-danger" name="sumbutton" value="Calculate" onclick="calculate()" id="sumbutton"></td>
+              <td><input class="btn btn-lg btn-success" type="reset" value="Reset" /></td>
+              <td><input style="font-size: 20px;" type="text" class="text-danger"   name="summ" id="summ" readonly></td>
+            </tr>
+          </table>
+
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+       
+     </div>
+
+   </div>
+   <div class="container">
+     <h1 style="text-align: center;">cpga</h1>
+      <form action="" class="cgpa">
+     <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+          <div class="row">
+            <div class="col-md-12">
+              <h2>select semester</h2>
+              <table style="width: 100%;">
+               
+                <tr>
+                  <td>
+                    <label style="border-radius: 10px;" for="textenableradio1">one</label>
+                        <input type="radio" class="form-check-input" id="textenableradio1" name="semester" value="one" onclick="boxenable1()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio2">Two</label>
+                        <input type="radio" class="form-check-input" id="textenableradio2" name="semester" value="two" onclick="boxenable2()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio3">Three</label>
+                    <input type="radio" class="form-check-input" id="textenableradio3" name="semester" value="three" onclick="boxenable3()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio4">four</label>
+                    <input type="radio" class="form-check-input" id="textenableradio4" name="semester" value="three" onclick="boxenable4()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio5">five</label>
+                    <input type="radio" class="form-check-input" id="textenableradio5" name="semester" value="three" onclick="boxenable5()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio6">six</label>
+                                        <input type="radio" class="form-check-input" id="textenableradio6" name="semester" value="three" onclick="boxenable6()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio7">Seven</label>
+                                            <input type="radio" class="form-check-input" id="textenableradio7" name="semester" value="three" onclick="boxenable7()" >
+                  </td>
+                  <td>
+                    <label for="textenableradio8">Eight</label>
+                                            <input type="radio" class="form-check-input" id="textenableradio8" name="semester" value="three" onclick="boxenable8()" >
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"></div>
+          <div class="col-md-6">
+              <div class="entmark" style="width: 100px;">
+                <ul>
+                  <li><input type="text" class="form-control" id="s1" placeholder="sem1" ></li>
+                  <li><input type="text" class="form-control" id="s2" placeholder="sem2" ></li>
+                  <li><input type="text" class="form-control" id="s3" placeholder="sem3" ></li>
+                  <li><input type="text" class="form-control" id="s4" placeholder="sem4"></li>
+                  <li><input type="text" class="form-control" id="s5" placeholder="sem5"></li>
+                  <li><input type="text" class="form-control" id="s6" placeholder="sem6"></li>
+                  <li><input type="text" class="form-control" id="s7" placeholder="sem7"></li>
+                  <li><input type="text" class="form-control" id="s8" placeholder="sem8"></li>
+                </ul>
+            </div>
+            <input style="margin-right: 10px;" type="button" class="btn btn-lg btn-danger" value="Calculate" onclick="cgpa()">
+            <input class="btn btn-lg btn-success" type="reset" value="Reset" >
+            </form>
+            <input style="margin-top: 20px;font-size: 20px;margin-bottom: 70px;" type="text" class="form-control text-danger" id="answer" placeholder="cgpa">
+           
+          </div>
+            <div class="col-md-3"></div>
+            </div>
+
+          </div>
+        
+        </div> 
+      </form>  
+     </div>
+     
+
+   <script>
+    function calculate()
+    {
+      var f=document.getElementById ('mark1').value;
+    var g=document.getElementById('mark2').value;
+    var h=document.getElementById('mark3').value;
+    var i=document.getElementById ('mark4').value;
+    var j=document.getElementById('mark5').value;
+    var k=document.getElementById('mark6').value;
+
+    var f1 = document.getElementById('cred1').value;
+    var g1=document.getElementById('cred2').value;
+    var h1=document.getElementById('cred3').value;
+    var i1=document.getElementById ('cred4').value;
+    var j1=document.getElementById('cred5').value;
+    var k1=document.getElementById('cred6').value;
+
+   var sum1 = f*f1 ;
+    
+    
+    var sum2 = g*g1 ;
+    
+    
+    var sum3 = h*h1 ;
+    
+   
+    var sum4 = i*i1 ;
+    
+    
+    var sum5 = j*j1 ;
+    
+    
+    var sum6 = k*k1 ;
+    
+    var allcred = parseFloat(f1) + parseFloat(g1) + parseFloat(h1) + parseFloat(i1) + parseFloat(j1) + parseFloat(k1) ;
+
+    var allsum = sum1 + sum2 + sum3 + sum4 + sum5 + sum6;
+
+    var allavg = (allsum/allcred).toFixed(2);
+
+    document.gpa.summ.value = allavg ;
+    }
+    function boxenable1()
+{
+    document.getElementById ('s1').style.display ='block';
+        document.getElementById ('s2').style.display ='none';
+        document.getElementById ('s3').style.display ='none';
+        document.getElementById ('s4').style.display ='none';
+        document.getElementById ('s5').style.display ='none';
+        document.getElementById ('s6').style.display ='none';
+        document.getElementById ('s7').style.display ='none';
+        document.getElementById ('s8').style.display ='none';
+        document.getElementById ('s2').value=0;
+        document.getElementById ('s3').value=0;
+        document.getElementById ('s4').value=0;
+        document.getElementById ('s5').value=0;
+        document.getElementById ('s6').value=0;
+        document.getElementById ('s7').value=0;
+        document.getElementById ('s8').value=0;
+        let totnum = 1;
+    }
+
+    function boxenable2()
+{
+    document.getElementById ('s1').style.display ='block';
+        document.getElementById ('s2').style.display ='block';
+        document.getElementById ('s3').style.display ='none';
+        document.getElementById ('s4').style.display ='none';
+        document.getElementById('s3').value=0;
+        document.getElementById('s4').value=0;
+        document.getElementById ('s5').style.display ='none';
+        document.getElementById ('s6').style.display ='none';
+        document.getElementById ('s7').style.display ='none';
+        document.getElementById ('s8').style.display ='none';
+        document.getElementById ('s5').value=0;
+        document.getElementById ('s6').value=0;
+        document.getElementById ('s7').value=0;
+        document.getElementById ('s8').value=0;
+        let totnum=2;
+    }
+
+    function boxenable3()
+    {
+        document.getElementById ('s1').style.display ='block';
+            document.getElementById ('s2').style.display ='block';
+            document.getElementById ('s3').style.display ='block';
+            document.getElementById ('s4').style.display ='none';
+            document.getElementById ('s5').style.display ='none';
+            document.getElementById ('s6').style.display ='none';
+            document.getElementById ('s7').style.display ='none';
+            document.getElementById ('s8').style.display ='none';
+            document.getElementById ('s4').value=0;
+            document.getElementById ('s5').value=0;
+            document.getElementById ('s6').value=0;
+            document.getElementById ('s7').value=0;
+            document.getElementById ('s8').value=0;
+            let totnum = 3;
+        }
+    
+        function boxenable4()
+    {
+        document.getElementById ('s1').style.display ='block';
+            document.getElementById ('s2').style.display ='block';
+            document.getElementById ('s3').style.display ='block';
+            document.getElementById ('s4').style.display ='block';
+            document.getElementById ('s5').style.display ='none';
+            document.getElementById ('s6').style.display ='none';
+            document.getElementById ('s7').style.display ='none';
+            document.getElementById ('s8').style.display ='none';
+            document.getElementById ('s5').value=0;
+            document.getElementById ('s6').value=0;
+            document.getElementById ('s7').value=0;
+            document.getElementById ('s8').value=0;
+            let totnum = 4;
+        }
+        function boxenable5()
+        {
+            document.getElementById ('s1').style.display ='block';
+                document.getElementById ('s2').style.display ='block';
+                document.getElementById ('s3').style.display ='block';
+                document.getElementById ('s4').style.display ='block';
+                document.getElementById ('s5').style.display ='block';
+                document.getElementById ('s6').style.display ='none';
+                document.getElementById ('s7').style.display ='none';
+                document.getElementById ('s8').style.display ='none';
+                document.getElementById ('s6').value=0;
+                document.getElementById ('s7').value=0;
+                document.getElementById ('s8').value=0;
+                let totnum = 5;
+            }
+
+            function boxenable6()
+    {
+        document.getElementById ('s1').style.display ='block';
+            document.getElementById ('s2').style.display ='block';
+            document.getElementById ('s3').style.display ='block';
+            document.getElementById ('s4').style.display ='block';
+            document.getElementById ('s5').style.display ='block';
+            document.getElementById ('s6').style.display ='block';
+            document.getElementById ('s7').style.display ='none';
+            document.getElementById ('s8').style.display ='none';
+            document.getElementById ('s7').value=0;
+            document.getElementById ('s8').value=0;
+            let totnum = 6;
+        }
+        function boxenable7()
+    {
+        document.getElementById ('s1').style.display ='block';
+            document.getElementById ('s2').style.display ='block';
+            document.getElementById ('s3').style.display ='block';
+            document.getElementById ('s4').style.display ='block';
+            document.getElementById ('s5').style.display ='block';
+            document.getElementById ('s6').style.display ='block';
+            document.getElementById ('s7').style.display ='block';
+            document.getElementById ('s8').style.display ='none';
+            document.getElementById ('s8').value=0;
+            let totnum = 7;
+        }
+    
+    
+        
+        function boxenable8()
+        {
+            document.getElementById ('s1').style.display ='block';
+                document.getElementById ('s2').style.display ='block';
+                document.getElementById ('s3').style.display ='block';
+                document.getElementById ('s4').style.display ='block';
+                document.getElementById ('s5').style.display ='block';
+                document.getElementById ('s6').style.display ='block';
+                document.getElementById ('s7').style.display ='block';
+                document.getElementById ('s8').style.display ='block';
+                let totnum = 8;
+            }
+     
+        function cgpa()
+        {
+          var s1 = document.getElementById("s1").value;
+    var s2 = document.getElementById("s2").value;
+    var s3 = document.getElementById("s3").value;
+    var s4 = document.getElementById("s4").value;
+    var s5 = document.getElementById ('s5').value;
+    var s6=  document.getElementById ('s6').value;
+    var s7=  document.getElementById ('s7').value;
+    var s8=  document.getElementById ('s8').value;
+   
+    let sum = parseFloat(s1)+parseFloat(s2)+parseFloat(s3)+parseFloat(s4)+parseFloat(s5)+parseFloat(s6)+parseFloat(s7)+parseFloat(s8);
+     
+     if(document.getElementById("s8").value!=0){
+         result = sum / 8 ;
+     }
+     else if(document.getElementById("s7").value!=0)
+     {
+         result = sum / 7 ;
+     }
+     else if(document.getElementById("s6").value!=0)
+     {
+         result = sum / 6 ;
+     }
+     else if(document.getElementById("s5").value!=0)
+     {
+         result = sum / 5 ;
+     }
+     else if(document.getElementById("s4").value!=0)
+     {
+         result = sum / 4 ;
+     }
+     else if(document.getElementById("s3").value!=0)
+     {
+         result = sum / 3 ;
+     }
+     else if(document.getElementById("s2").value!=0)
+     {
+         result = sum / 2 ;
+     }
+     else if(document.getElementById("s2").value!=0)
+     {
+         result = sum / 2 ;
+     }
+
+     else
+     {
+         result = sum / 1 ;
+     }
+     
+    if(!isNaN(result))
+    {
+        document.getElementById("answer").value= result.toFixed(2);
+    }
+  }
+        
+   </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
